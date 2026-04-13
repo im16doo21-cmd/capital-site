@@ -1,0 +1,529 @@
+هذا 
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capital שיפוצים וצבע</title>
+  <meta name="description" content="Capital שיפוצים וצבע - קבלן שיפוצים מקצועי עם ניסיון של שנים. ריצוף, טיח וצבע, שיפוץ מטבחים, מקלחות, משרדים, מפעלים ורעפים." />
+  <style>
+    :root{
+      --bg:#f6f4ef;
+      --card:#ffffff;
+      --text:#181818;
+      --muted:#666;
+      --accent:#c8a75d;
+      --dark:#0f1720;
+      --border:#e8e2d6;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{
+      width:min(1120px, calc(100% - 28px));
+      margin:auto;
+    }
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 0;
+    }
+    .brand{
+      font-size:1.15rem;
+      font-weight:700;
+      color:var(--dark);
+    }
+    .menu{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      font-size:.96rem;
+      color:#333;
+    }
+    .hero{
+      background:
+        linear-gradient(rgba(15,23,32,.62), rgba(15,23,32,.62)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color:#fff;
+    }
+    .hero-inner{
+      min-height:78vh;
+      display:flex;
+      align-items:center;
+      padding:70px 0;
+    }
+    .hero-box{
+      max-width:720px;
+    }
+    .eyebrow{
+      display:inline-block;
+      background:rgba(255,255,255,.13);
+      border:1px solid rgba(255,255,255,.16);
+      padding:8px 14px;
+      border-radius:999px;
+      margin-bottom:18px;
+      font-size:.92rem;
+    }
+    h1{
+      font-size:clamp(2rem, 5vw, 4rem);
+      line-height:1.12;
+      margin:0 0 16px;
+    }
+    .hero p{
+      font-size:1.1rem;
+      max-width:640px;
+      color:#f1f1f1;
+      margin:0 0 28px;
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 22px;
+      border-radius:12px;
+      font-weight:700;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
+    .btn-primary{
+      background:var(--accent);
+      color:#111;
+    }
+    .btn-secondary{
+      background:transparent;
+      border-color:#fff;
+      color:#fff;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    section{
+      padding:70px 0;
+    }
+    .section-head{
+      text-align:center;
+      margin-bottom:34px;
+    }
+    .section-head h2{
+      font-size:clamp(1.6rem, 3vw, 2.5rem);
+      margin:0 0 10px;
+      color:var(--dark);
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+    }
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:-34px;
+    }
+    .stat{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px 18px;
+      text-align:center;
+    }
+    .stat strong{
+      display:block;
+      font-size:1.8rem;
+      color:var(--dark);
+    }
+    .stat span{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .services{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.2rem;
+      color:var(--dark);
+    }
+    .card p{
+      margin:0;
+      color:#444;
+    }
+    .split{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:center;
+    }
+    .about-box p{
+      color:#444;
+      margin:0 0 14px;
+    }
+    .feature-list{
+      display:grid;
+      gap:10px;
+      margin-top:18px;
+    }
+    .feature{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:12px 14px;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .gallery figure{
+      margin:0;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+    .gallery img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+    .gallery figcaption{
+      padding:12px 14px;
+      font-size:.95rem;
+      color:#333;
+    }
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+    }
+    .review{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .review strong{
+      display:block;
+      margin-top:10px;
+      color:var(--dark);
+    }
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+    .contact-info p{
+      margin:0 0 12px;
+      color:#444;
+    }
+    form{
+      display:grid;
+      gap:12px;
+    }
+    input, textarea{
+      width:100%;
+      border:1px solid #d8d3ca;
+      border-radius:12px;
+      padding:14px;
+      font:inherit;
+      background:#fff;
+    }
+    textarea{min-height:140px; resize:vertical}
+    .footer{
+      background:var(--dark);
+      color:#fff;
+      padding:26px 0 90px;
+      text-align:center;
+      margin-top:20px;
+    }
+    .floating{
+      position:fixed;
+      bottom:18px;
+      z-index:60;
+      width:58px;
+      height:58px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      box-shadow:0 10px 24px rgba(0,0,0,.22);
+      font-size:24px;
+    }
+    .floating.whatsapp{right:18px;background:#1fa855}
+    .floating.phone{left:18px;background:#1d4ed8}
+    .notice{
+      background:#fff8e8;
+      border:1px solid #f0dfb3;
+      color:#5b4b1d;
+      padding:14px 16px;
+      border-radius:14px;
+      margin-top:16px;
+      font-size:.95rem;
+    }
+    @media (max-width: 900px){
+      .stats,
+      .services,
+      .split,
+      .gallery,
+      .reviews,
+      .contact-wrap{
+        grid-template-columns:1fr;
+      }
+      .hero-inner{min-height:68vh}
+      .gallery img{height:220px}
+      .menu{
+        gap:12px;
+        font-size:.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand">Capital שיפוצים וצבע</div>
+      <div class="menu">
+        <a href="#home">דף הבית</a>
+        <a href="#about">אודות</a>
+        <a href="#services">שירותים</a>
+        <a href="#gallery">גלריה</a>
+        <a href="#reviews">המלצות</a>
+        <a href="#contact">צור קשר</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-box">
+        <span class="eyebrow">קבלן שיפוצים מקצועי עם ניסיון של שנים</span>
+        <h1>Capital שיפוצים וצבע<br>שיפוץ איכותי, נקי ומדויק לכל סוגי הפרויקטים</h1>
+        <p>
+          מבצעים עבודות שיפוץ, ריצוף, טיח וצבע, שיפוץ מטבחים ומקלחות, משרדים, מפעלים ורעפים.
+          שירות אמין, עבודה ברמה גבוהה ועמידה בזמנים.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/972505627050">שלח וואטסאפ</a>
+          <a class="btn btn-secondary" href="tel:0505627050">התקשר עכשיו</a>
+        </div>
+        <div class="notice">זמינים לפרויקטים פרטיים, עסקיים ושיפוצים כלליים. הצעת מחיר מהירה ושירות אישי.</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><strong>15+</strong><span>שנות ניסיון</span></div>
+      <div class="stat"><strong>100%</strong><span>שירות אישי</span></div>
+      <div class="stat"><strong>זמינות</strong><span>ליצירת קשר מהירה</span></div>
+      <div class="stat"><strong>איכות</strong><span>גימור ברמה גבוהה</span></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container split">
+      <div class="about-box">
+        <div class="section-head" style="text-align:right;margin-bottom:18px;">
+          <h2>אודות החברה</h2>
+          <p>שיפוץ מקצועי עם חשיבה על איכות, אמינות ותוצאה שמחזיקה לאורך זמן.</p>
+        </div>
+        <p>
+          Capital שיפוצים וצבע מתמחה בעבודות שיפוץ וגמר ברמה גבוהה לבתים פרטיים, דירות,
+          משרדים ועסקים. אנחנו שמים דגש על עבודה מסודרת, הקשבה ללקוח, חומרים איכותיים
+          ועמידה בזמנים.
+        </p>
+        <p>
+          המטרה שלנו היא לא רק לשפץ, אלא לייצר חלל נעים, יפה ופונקציונלי שמתאים בדיוק
+          לצרכים שלכם. כל פרויקט מקבל ליווי אישי, אחריות מלאה ויחס מקצועי מתחילת העבודה
+          ועד הגימור האחרון.
+        </p>
+        <div class="feature-list">
+          <div class="feature">✔ עבודה נקייה ומקצועית</div>
+          <div class="feature">✔ מחירים הוגנים ושקיפות מלאה</div>
+          <div class="feature">✔ ניסיון במגוון סוגי שיפוצים</div>
+          <div class="feature">✔ התאמה מלאה לצרכי הלקוח</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" alt="שיפוצים מקצועיים">
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>השירותים שלנו</h2>
+        <p>פתרונות שיפוץ מקצועיים לבית, לעסק ולמשרד.</p>
+      </div>
+      <div class="services">
+        <div class="card">
+          <h3>ריצוף</h3>
+          <p>עבודות ריצוף מקצועיות עם הכנת תשתית, התקנה מדויקת וגימור נקי ואסתטי לכל סוגי החללים.</p>
+        </div>
+        <div class="card">
+          <h3>טיח וצבע</h3>
+          <p>תיקוני קירות, החלקת שפכטל, צבע פנימי וחיצוני ועבודות גמר שנותנות מראה חדש, נקי ומודרני.</p>
+        </div>
+        <div class="card">
+          <h3>שיפוץ בית</h3>
+          <p>שיפוץ כולל לבית משלב הפירוק ועד הגימור האחרון, עם התאמה מלאה לצרכים ולתקציב.</p>
+        </div>
+        <div class="card">
+          <h3>שיפוץ מטבח</h3>
+          <p>שדרוג מטבחים בצורה חכמה, נוחה ומרשימה כולל חיפויים, משטחים, ריצוף ועבודות גמר.</p>
+        </div>
+        <div class="card">
+          <h3>שיפוץ מקלחת</h3>
+          <p>שיפוץ חדרי רחצה עם דגש על איטום, נוחות, עיצוב מודרני ועבודה איכותית לאורך זמן.</p>
+        </div>
+        <div class="card">
+          <h3>שיפוץ משרדים</h3>
+          <p>התאמת משרדים לעסקים עם חלוקה נכונה של חללים, צבע, ריצוף וגימור מקצועי.</p>
+        </div>
+        <div class="card">
+          <h3>מפעלים</h3>
+          <p>עבודות שיפוץ ותחזוקה למפעלים עם חומרים עמידים, עבודה יעילה ועמידה בדרישות הפרויקט.</p>
+        </div>
+        <div class="card">
+          <h3>רעפים</h3>
+          <p>תיקון והחלפה של רעפים, טיפול בנזילות, חיזוקים ועבודות גג בצורה מקצועית ובטוחה.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <h2>גלריית עבודות</h2>
+        <p>דוגמאות לסגנון עבודה, גימור איכותי ותוצאה מקצועית.</p>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80" alt="ריצוף">
+          <figcaption>עבודות ריצוף מדויקות</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="צבע">
+          <figcaption>טיח וצבע בגימור נקי</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80" alt="מטבח">
+          <figcaption>שיפוץ מטבח מודרני</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80" alt="מקלחת">
+          <figcaption>שיפוץ מקלחת ברמה גבוהה</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="משרד">
+          <figcaption>שיפוץ ועיצוב משרדים</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80" alt="עבודה מקצועית">
+          <figcaption>עבודה מקצועית עם הקפדה על פרטים</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2>מה הלקוחות אומרים</h2>
+        <p>אמינות, מקצועיות ותוצאה שמדברת בעד עצמה.</p>
+      </div>
+      <div class="reviews">
+        <div class="review">עבודה מקצועית מאוד, נקייה ומדויקת. ממליץ בחום.<strong>— לקוח מרוצה</strong></div>
+        <div class="review">שירות אמין, יחס אישי ותוצאה מצוינת מעל הציפיות.<strong>— לקוחה מרוצה</strong></div>
+        <div class="review">עמדו בזמנים והיו זמינים לאורך כל התהליך.<strong>— לקוח פרטי</strong></div>
+        <div class="review">שיפוץ מטבח ברמה גבוהה מאוד, עבודה יפה ומסודרת.<strong>— משפחת כהן</strong></div>
+        <div class="review">מחיר הוגן, שירות מקצועי ואיכות שלא רואים בכל מקום.<strong>— לקוח עסקי</strong></div>
+        <div class="review">שיפוץ מקלחת מושלם, בדיוק כמו שרצינו.<strong>— לקוחה מרוצה</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>צור קשר</h2>
+        <p>לקבלת הצעת מחיר מהירה ולפרטים נוספים.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="card contact-info">
+          <h3>דברו איתנו</h3>
+          <p><strong>טלפון:</strong> 050-562-7050</p>
+          <p><strong>וואטסאפ:</strong> 050-562-7050</p>
+          <p>זמינים לשיחות, הודעות וואטסאפ ותיאום פגישה.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/972505627050">שלח וואטסאפ</a>
+            <a class="btn btn-secondary" style="color:#111;border-color:#cfc7b8;" href="tel:0505627050">התקשר עכשיו</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>השאירו פרטים</h3>
+          <form>
+            <input type="text" placeholder="שם מלא">
+            <input type="tel" placeholder="טלפון">
+            <input type="email" placeholder="אימייל">
+            <textarea placeholder="איך אפשר לעזור לכם?"></textarea>
+            <button class="btn btn-primary" type="button">שלח פנייה</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <strong>Capital שיפוצים וצבע</strong><br>
+      כל הזכויות שמורות ©
+    </div>
+  </footer>
+
+  <a class="floating whatsapp" href="https://wa.me/972505627050" aria-label="WhatsApp">💬</a>
+  <a class="floating phone" href="tel:0505627050" aria-label="Phone">📞</a>
+
+</body>
+</html>
