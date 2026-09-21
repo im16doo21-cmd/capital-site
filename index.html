@@ -487,14 +487,7 @@ footer p{color:var(--muted);font-size:.92rem;margin-bottom:4px}
   <div class="wrap">
     <div class="brand"><span class="mark">C</span> Capital שיפוצים <span style="color:var(--muted);font-weight:500;font-size:.95rem">| עימאד</span></div>
     <p>שיפוץ קומפלט ובנייה קלה · ניסיון 15+ שנה · שירות בכל הארץ</p>
-    <p>© Capital שיפוצים — כל הזכויות שמורות</p>
-  </div>
-</footer>
-
-<a class="float wa" href="https://wa.me/972505627050?text=שלום, אני מעוניין בהצעת מחיר חינם לשיפוץ" aria-label="וואטסאפ">💬</a>
-<a class="float tel" href="tel:0505627050" aria-label="טלפון">📞</a>
-
-<script>
+    <script>
 function toggleSound(vidId, btn){
   var v = document.getElementById(vidId);
   if(v.muted){
@@ -505,9 +498,33 @@ function toggleSound(vidId, btn){
       other.muted = true;
       var otherBtn = other.parentElement.querySelector('.sound-btn');
       if(otherBtn) otherBtn.innerHTML = '🔇 הפעל קול';
-    } 
-    <!-- OpenAI conversion: phone and WhatsApp clicks -->
+    }
+  } else {
+    v.muted = true;
+    btn.innerHTML = '🔇 הפעל קול';
+  }
+}
+</script>
+
+<!-- OpenAI conversion: phone and WhatsApp clicks -->
 <script>
+document.addEventListener("click", function(event) {
+  const contactLink = event.target.closest(
+    'a[href^="tel:"], a[href*="wa.me/"]'
+  );
+
+  if (!contactLink) return;
+
+  oaiq(
+    "measure",
+    "lead_created",
+    { type: "customer_action" }
+  );
+}, true);
+</script>
+
+</body>
+</html>
 document.addEventListener("click", function(event) {
   const contactLink = event.target.closest(
     'a[href^="tel:"], a[href*="wa.me/"]'
