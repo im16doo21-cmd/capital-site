@@ -505,7 +505,23 @@ function toggleSound(vidId, btn){
       other.muted = true;
       var otherBtn = other.parentElement.querySelector('.sound-btn');
       if(otherBtn) otherBtn.innerHTML = '🔇 הפעל קול';
-    }
+    } 
+    <!-- OpenAI conversion: phone and WhatsApp clicks -->
+<script>
+document.addEventListener("click", function(event) {
+  const contactLink = event.target.closest(
+    'a[href^="tel:"], a[href*="wa.me/"]'
+  );
+
+  if (!contactLink) return;
+
+  oaiq(
+    "measure",
+    "lead_created",
+    { type: "customer_action" }
+  );
+}, true);
+</script>
   } else {
     v.muted = true;
     btn.innerHTML = '🔇 הפעל קול';
